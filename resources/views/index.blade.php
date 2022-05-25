@@ -154,7 +154,7 @@
     <div><h1 class="cookie_main_heading">Cookie Settings</h1></div>
   <div class="cookiealert-container">We use cookies, some of them are essential, others are optional.<a href="http://cookiesandyou.com/" target="_blank">Learn more</a>
 
-      
+
   </div>
     <hr>
     <div>
