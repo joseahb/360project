@@ -10,6 +10,7 @@ class HomeController extends Controller
     {
         return view('index');
     }
+<<<<<<< HEAD
     public function about()
     {
         return view('about');
@@ -41,4 +42,6 @@ class HomeController extends Controller
     {
         return view('all-sites');
     }
+=======
+>>>>>>> 3541cb1d431e158b47c90c203ceaaed4ba5e9444
 }

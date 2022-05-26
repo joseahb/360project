@@ -9,9 +9,14 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
+<<<<<<< HEAD
         "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "laravel/ui": "^3.4"
+=======
+        "laravel/sanctum": "^2.15",
+        "laravel/tinker": "^2.5"
+>>>>>>> 3541cb1d431e158b47c90c203ceaaed4ba5e9444
     },
     "require-dev": {
         "facade/ignition": "^2.5",
