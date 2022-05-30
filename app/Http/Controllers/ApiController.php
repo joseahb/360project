@@ -31,7 +31,7 @@ class ApiController extends Controller
             $xml = simplexml_load_string($response->body());
             $json = json_encode($xml);
             $array = json_decode($json,TRUE);
-            return $array['branch']['url'];
+            return 1;
         }
     }
     public function branch()
