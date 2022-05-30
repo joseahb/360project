@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<branch xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://webservices.vebra.com/export/xsd/v11/exportapi.xsd">
+    <FirmID>82675</FirmID>
+    <BranchID>1</BranchID>
+    <name>360 PROPERTY VENTURES LTD</name>
+    <street>4-5 Gough Square</street>
+    <town />
+    <county>London</county>
+    <postcode>EC4A 3DE</postcode>
+    <phone>02077 688861</phone>
+    <email>sm@threesixtyproperty.co.uk</email>
+</branch>

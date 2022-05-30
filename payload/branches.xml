@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<branches xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://webservices.vebra.com/export/xsd/v11/exportapi.xsd">
+    <branch>
+        <name>360 PROPERTY VENTURES LTD</name>
+        <firmid>82675</firmid>
+        <branchid>1</branchid>
+        <url>https://webservices.vebra.com/export/360propertyapi/v11/branch/40419</url>
+    </branch>
+</branches>

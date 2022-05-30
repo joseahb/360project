@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<property xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://webservices.vebra.com/export/xsd/v11/exportapi.xsd" id="31488859" propertyid="16767327" system="O" firmid="82675" branchid="1" database="15" featured="0">
+    <reference>
+        <agents />
+        <software>16767327</software>
+    </reference>
+    <address>
+        <name>1</name>
+        <street>Quilter House, Greyhound Lane</street>
+        <locality />
+        <town>London</town>
+        <county />
+        <postcode>SW16 5SD</postcode>
+        <custom_location />
+        <display>Quilter House, Streatham</display>
+    </address>
+    <price qualifier="" currency="GBP" display="yes">325000</price>
+    <rentalfees />
+    <lettingsfee />
+    <rm_qualifier>0</rm_qualifier>
+    <available>1900-01-01T00:00:00</available>
+    <uploaded>2022-05-12T13:32:15.36</uploaded>
+    <longitude>-0.134084</longitude>
+    <latitude>51.418895</latitude>
+    <easting>529731</easting>
+    <northing>170583</northing>
+    <streetview>
+        <pov_latitude>51.418895</pov_latitude>
+        <pov_longitude>-0.134056</pov_longitude>
+        <pov_pitch>10.00</pov_pitch>
+        <pov_heading>0.00</pov_heading>
+        <pov_zoom>1</pov_zoom>
+    </streetview>
+    <web_status>0</web_status>
+    <custom_status />
+    <comm_rent />
+    <premium />
+    <service_charge />
+    <rateable_value />
+    <type>Apartment</type>
+    <type />
+    <furnished>3</furnished>
+    <rm_type>28</rm_type>
+    <let_bond>0</let_bond>
+    <rm_let_type_id>0</rm_let_type_id>
+    <bedrooms>0</bedrooms>
+    <receptions>1</receptions>
+    <bathrooms>1</bathrooms>
+    <userfield1 />
+    <userfield2>0</userfield2>
+    <solddate xsi:nil="true" />
+    <leaseend xsi:nil="true" />
+    <instructed xsi:nil="true" />
+    <letdate xsi:nil="true" />
+    <soldprice xsi:nil="true" />
+    <garden xsi:nil="true" />
+    <parking xsi:nil="true" />
+    <newbuild>1</newbuild>
+    <groundrent />
+    <commission />
+    <tenure>2</tenure>
+    <area unit="sqft">
+        <min>0</min>
+        <max>428</max>
+    </area>
+    <description>This exceptional and brand new 411 sq ft / 38.2 sq m studio bedroom apartment located on the first floor within the fantastic new boutique development of Quilter House is available for off-plan sale through 360 Property.&lt;br/&gt; Finished to an incredibly high standard throughout the apartment boasts of a large private terrace. &lt;br/&gt;Residents of Quilter House will have access to c150 square metres of southern-orientated interior landscaped gardens, each apartment has its own covered secure cycle parking space, with further cycle spaces located beside the property.  &lt;br/&gt; Quilter House is at the heart of a vibrant local community with a range of independently run shops and cafes and is located moments from Streatham Common train station offering high speed links into Central London and out of town to the Surrey Hills and Epsom Downs. &lt;br/&gt;*Images are for illustrative purposes only, and are intended as an approximate guide*</description>
+    <hip>
+        <energy_performance>
+            <energy_efficiency>
+                <current>0</current>
+                <potential>0</potential>
+            </energy_efficiency>
+            <environmental_impact>
+                <current>0</current>
+                <potential>0</potential>
+            </environmental_impact>
+        </energy_performance>
+    </hip>
+    <paragraphs />
+    <bullets>
+        <bullet id="1">Available to move into from late 2022</bullet>
+        <bullet id="2">411 sqft / 38.2 sq m</bullet>
+        <bullet id="3">Private Terrace</bullet>
+        <bullet id="4">Excellent communal spaces inside and out</bullet>
+        <bullet id="5">Brand new Sainsbury’s Local at street level</bullet>
+        <bullet id="6">Eligible for the Governments help to buy scheme</bullet>
+        <bullet id="7">Moments from Streatham Common Train Station</bullet>
+    </bullets>
+    <userfeatures />
+    <adverts />
+    <files>
+        <file id="0" type="0">
+            <name>1558_Tankerville-House_Courtyard_2021-04-19_FINAL.</name>
+            <url>https://alto3-alto-media.s3.amazonaws.com/yJSctENtYshHUOwvP3sucJS1OUo/nsFpGY7ZWJvn7DudkJbopn7fKYA/Photo/[3]/b4t5AlcG1k6qu0DMKw1ktQ.jpg</url>
+            <updated>2022-05-12T13:32:15.36</updated>
+        </file>
+        <file id="1" type="0">
+            <name>1570_Tankerville-House_Bathroom_2021-05-05_FINAL.j</name>
+            <url>https://alto3-alto-media.s3.amazonaws.com/yJSctENtYshHUOwvP3sucJS1OUo/nsFpGY7ZWJvn7DudkJbopn7fKYA/Photo/[3]/osMXdVsNTUalokwzyNjwkA.jpg</url>
+            <updated>2022-05-12T13:32:15.36</updated>
+        </file>
+        <file id="2" type="0">
+            <name>1558_Tankerville-House_Kitchen_2021-04-19_FINAL.jp</name>
+            <url>https://alto3-alto-media.s3.amazonaws.com/yJSctENtYshHUOwvP3sucJS1OUo/nsFpGY7ZWJvn7DudkJbopn7fKYA/Photo/[3]/f2IUXcV86kmMBO-OjLhTmQ.jpg</url>
+            <updated>2022-05-12T13:32:15.36</updated>
+        </file>
+        <file id="3" type="0">
+            <name>1591_Tankerville-House_Unit-16_2021-08-20_FINAL.jp</name>
+            <url>https://alto3-alto-media.s3.amazonaws.com/yJSctENtYshHUOwvP3sucJS1OUo/nsFpGY7ZWJvn7DudkJbopn7fKYA/Photo/[3]/KieSyxWBJEaSc1ciB0QCdw.jpg</url>
+            <updated>2022-05-12T13:32:15.36</updated>
+        </file>
+        <file id="4" type="2">
+            <name>Aparment 1 floorplan.png</name>
+            <url>https://alto3-alto-media.s3.amazonaws.com/yJSctENtYshHUOwvP3sucJS1OUo/nsFpGY7ZWJvn7DudkJbopn7fKYA/Floorplan/[3]/xx287e_1gEOungB8KbrOfQ.png</url>
+            <updated>2022-05-20T16:08:34.257</updated>
+        </file>
+        <file id="5" type="7">
+            <name>Quilter House, Streatham</name>
+            <url>https://alto3-alto-media.s3.amazonaws.com/yJSctENtYshHUOwvP3sucJS1OUo/nsFpGY7ZWJvn7DudkJbopn7fKYA/Brochure/[0]/LqIM-ksdy0-wXc-sLd8UFg.pdf</url>
+            <updated>2022-05-20T16:08:34.257</updated>
+        </file>
+        <file id="6" type="6">
+            <name>Brochure</name>
+            <url>https://www.vebra.com/details/property/31488859</url>
+            <updated>2022-05-20T16:05:00</updated>
+        </file>
+    </files>
+</property>

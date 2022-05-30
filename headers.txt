@@ -1,24 +1,10 @@
-<<<<<<< HEAD
 HTTP/1.1 401 Unauthorized
 Cache-Control: private
 Content-Length: 58
 Content-Type: text/html
 Server: Microsoft-IIS/8.5
-Set-Cookie: ASP.NET_SessionId=jvclbouatmcseqghodg5o0ma; path=/; HttpOnly; SameSite=Lax
+Set-Cookie: ASP.NET_SessionId=ql3ingrmwaeb1n4tpefc33kb; path=/; HttpOnly; SameSite=Lax
 X-AspNet-Version: 4.0.30319
 X-Powered-By: ASP.NET
-Date: Mon, 23 May 2022 13:37:54 GMT
-=======
-HTTP/1.1 200 OK
-Cache-Control: private
-Content-Length: 426
-Content-Type: text/xml; charset=utf-8
-Last-Modified: Wed, 25 May 2022 10:11:12 GMT
-Server: Microsoft-IIS/8.5
-Set-Cookie: ASP.NET_SessionId=lheecyd4symllygjkgmy5tfr; path=/; HttpOnly; SameSite=Lax
-Token: EPVUXVLDQWVRGFWPNTILICTELJCWLUUGMYSNBKMALAJEFUIMMY
-X-AspNet-Version: 4.0.30319
-X-Powered-By: ASP.NET
-Date: Wed, 25 May 2022 10:11:11 GMT
->>>>>>> 3541cb1d431e158b47c90c203ceaaed4ba5e9444
+Date: Mon, 30 May 2022 10:09:08 GMT
 

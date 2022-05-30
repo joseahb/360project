@@ -12,7 +12,6 @@ class CanAuthenticateApiTest extends TestCase
     public function test_authenticate(Type $var = null)
     {
         $response = $this->get(route('api.authenticate'));
-        dd($response);
         $response->assertStatus(200);
     }
 }
