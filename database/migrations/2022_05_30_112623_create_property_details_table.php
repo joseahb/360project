@@ -47,8 +47,16 @@ class CreatePropertyDetailsTable extends Migration
             $table->string('groundrent');
             $table->string('commission')->nullable();
             $table->string('tenure');
-            $table->string('area_min');
-            $table->string('area_max');
+
+            $table->string('solddate');
+            $table->string('leaseend');
+            $table->string('instructed');
+            $table->string('letdate');
+            $table->string('soldprice');
+            $table->string('garden');
+            $table->string('parking');
+            $table->string('paragraphs');
+            $table->string('area');
             $table->string('description');
             $table->string('hip');
             $table->string('bullets');
