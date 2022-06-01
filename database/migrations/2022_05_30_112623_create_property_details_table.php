@@ -15,8 +15,9 @@ class CreatePropertyDetailsTable extends Migration
     {
         Schema::create('property_details', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('agents')->nullable();
-            $table->bigInteger('software');
+            $table->bigInteger('prop_id');
+            $table->string('agents')->nullable();
+            $table->string('software');
             $table->string('price');
             $table->string('rentalfees')->nullable();
             $table->string('lettingsfee')->nullable();
@@ -57,9 +58,9 @@ class CreatePropertyDetailsTable extends Migration
             $table->string('parking');
             $table->string('paragraphs');
             $table->string('area');
-            $table->string('description');
+            $table->longText('description');
             $table->string('hip');
-            $table->string('bullets');
+            $table->longText('bullets');
             $table->string('userfeatures')->nullable();
             $table->string('adverts')->nullable();
             $table->timestamps();

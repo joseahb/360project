@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ApiController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ApiController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,3 +26,6 @@ Route::get('/properties', [ApiController::class, 'properties'])->name('api.prope
 Route::get('/property', [ApiController::class, 'property'])->name('api.property');
 Route::get('/update-data', [ApiController::class, 'updateProperties'])->name('api.update_data');
 Route::get('/update-files', [ApiController::class, 'updatedFiles'])->name('api.updated_files');
+
+
+Route::get('/initialize', [AdminController::class, 'initialize'])->name('api.init');

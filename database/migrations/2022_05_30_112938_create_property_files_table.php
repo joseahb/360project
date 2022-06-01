@@ -14,7 +14,11 @@ class CreatePropertyFilesTable extends Migration
     public function up()
     {
         Schema::create('property_files', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('id');
+            $table->bigInteger('prop_id');
+            $table->string('name');
+            $table->string('url');
+            $table->string('updated');
             $table->timestamps();
         });
     }

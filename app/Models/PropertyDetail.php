@@ -7,6 +7,7 @@ class PropertyDetail extends Model
 {
     use HasFactory;
     protected $fillable =[
+        'prop_id',
         'agents',
         'software',
         'price',

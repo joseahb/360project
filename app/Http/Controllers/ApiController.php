@@ -6,7 +6,10 @@ use App\Models\Branch;
 use App\Models\Property;
 use App\Models\BranchDetail;
 use Illuminate\Http\Request;
+use App\Models\PropertyFiles;
 use App\Models\PropertyDetail;
+use App\Models\PropertyAddresses;
+use App\Models\PropertyStreetView;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Cache;
 
@@ -15,12 +18,12 @@ class ApiController extends Controller
     private $username;
     private $password;
     private $datafeedID;
-    private $url ;
+    private $url;
     private $token ;
 
     public function __construct()
     {
-        Cache::put('token', 'PMEAFLUIIGUVYYMQSHTWNGRUXPIQNABIIASXMMLNDGETKXWBGG', $seconds = 3600);
+        Cache::put('token', 'WQEUGKHDLUDTGASYPPQLWAQUBNFCJXETBRCNCDXLXGHNNDBYMF', $seconds = 3600);
         $this->username = env('ALTO_USERNAME');
         $this->password = env('ALTO_PASSWORD');
         $this->datafeedID = env('ALTO_DATAFEEDID');
@@ -99,17 +102,17 @@ class ApiController extends Controller
     }
     public function property($branch = 40419, $id = 31488859)
     {
-        $properties = Property::select('url')->get();
+        $properties = Property::select('url','prop_id')->get();
         foreach ($properties as $link) {
             $response = $this->apiRequests($link->url);
             $result = $this->xmlToArray($response->body());
-            var_dump($result);
             $property_detail = PropertyDetail::create([
-                    'agents'        =>    json_encode($result['reference']['agents']),
+                    'prop_id'       =>    $link->prop_id,
+                    'agents'        =>    $this->sanitizeArray($result['reference']['agents']),
                     'software'      =>    $result['reference']['software'],
                     'price'         =>    $result['price'],
-                    'rentalfees'    =>    json_encode($result['rentalfees']),
-                    'lettingsfee'   =>    json_encode($result['lettingsfee']),
+                    'rentalfees'    =>    $this->sanitizeArray($result['rentalfees']),
+                    'lettingsfee'   =>    $this->sanitizeArray($result['lettingsfee']),
                     'rm_qualifier'  =>    $result['rm_qualifier'],
                     'available'     =>    $result['available'],
                     'uploaded'      =>    $result['uploaded'],
@@ -118,13 +121,13 @@ class ApiController extends Controller
                     'easting'       =>    $result['easting'],
                     'northing'      =>    $result['northing'],
                     'web_status'    =>    $result['web_status'],
-                    'custom_status' =>    json_encode($result['custom_status']),
-                    'comm_rent'     =>    json_encode($result['comm_rent']),
-                    'premium'       =>    json_encode($result['premium']),
-                    'service_charge'=>    json_encode($result['service_charge']),
-                    'rateable_value'=>    json_encode($result['rateable_value']),
-                    'type'          =>    json_encode($result['type']),
-                    'area'          =>   json_encode($result['area']),
+                    'custom_status' =>    $this->sanitizeArray($result['custom_status']),
+                    'comm_rent'     =>    $this->sanitizeArray($result['comm_rent']),
+                    'premium'       =>    $this->sanitizeArray($result['premium']),
+                    'service_charge'=>    $this->sanitizeArray($result['service_charge']),
+                    'rateable_value'=>    $this->sanitizeArray($result['rateable_value']),
+                    'type'          =>    $this->sanitizeArray($result['type']),
+                    'area'          =>   $this->sanitizeArray($result['area']),
                     'furnished'     =>    $result['furnished'],
                     'rm_type'       =>    $result['rm_type'],
                     'let_bond'      =>    $result['let_bond'],
@@ -132,28 +135,61 @@ class ApiController extends Controller
                     'bedrooms'      =>    $result['bedrooms'],
                     "receptions"    =>    $result['bedrooms'],
                     "bathrooms"     =>    $result['bathrooms'],
-                    "userfield1"    =>    json_encode($result['userfield1']),
-                    "userfield2"    =>    json_encode($result['userfield2']),
-                    "solddate"      =>    json_encode($result['solddate']),
-                    "leaseend"      =>    json_encode($result['leaseend']),
-                    "instructed"    =>    json_encode($result['instructed']),
-                    "letdate"       =>    json_encode($result['letdate']),
-                    "soldprice"     =>    json_encode($result['soldprice']),
-                    "garden"        =>    json_encode($result['garden']),
-                    "parking"       =>    json_encode($result['parking']),
+                    "userfield1"    =>    $this->sanitizeArray($result['userfield1']),
+                    "userfield2"    =>    $this->sanitizeArray($result['userfield2']),
+                    "solddate"      =>    $this->sanitizeArray($result['solddate']),
+                    "leaseend"      =>    $this->sanitizeArray($result['leaseend']),
+                    "instructed"    =>    $this->sanitizeArray($result['instructed']),
+                    "letdate"       =>    $this->sanitizeArray($result['letdate']),
+                    "soldprice"     =>    $this->sanitizeArray($result['soldprice']),
+                    "garden"        =>    $this->sanitizeArray($result['garden']),
+                    "parking"       =>    $this->sanitizeArray($result['parking']),
                     "newbuild"     =>     $result['newbuild'],
-                    "groundrent"   =>     json_encode($result['groundrent']),
-                    "commission"   =>     json_encode($result['commission']),
+                    "groundrent"   =>     $this->sanitizeArray($result['groundrent']),
+                    "commission"   =>     $this->sanitizeArray($result['commission']),
                     "tenure"       =>     $result['tenure'],
                     "description"  =>     $result['description'],
-                    "hip"          =>     json_encode($result['hip']),
-                    "paragraphs"   =>     json_encode($result['paragraphs']),
-                    "bullets"      =>     json_encode($result['bullets']),
-                    "userfeatures" =>     json_encode($result['userfeatures']),
-                    "adverts"      =>     json_encode($result['adverts']),
+                    "hip"          =>     $this->sanitizeArray($result['hip']),
+                    "paragraphs"   =>     $this->sanitizeArray($result['paragraphs']),
+                    "bullets"      =>     $this->sanitizeArray($result['bullets']),
+                    "userfeatures" =>     $this->sanitizeArray($result['userfeatures']),
+                    "adverts"      =>     $this->sanitizeArray($result['adverts']),
             ]);
+            $addresses = PropertyAddresses::create([
+                'pro_id'           =>    $link->prop_id,
+                'name'             =>      $result['address']['name'],
+                'street'           =>      $result['address']['street'],
+                'locality'         =>      $this->sanitizeArray($result['address']['locality']),
+                'town'             =>      $result['address']['town'],
+                'county'           =>      $this->sanitizeArray($result['address']['county']),
+                'postcode'         =>     $result['address']['postcode'],
+                'custom_location'  =>     $this->sanitizeArray($result['address']['custom_location']),
+                'display'          =>     $result['address']['display'],
+            ]);
+            $streetview = PropertyStreetView::create([
+                'prop_id'         => $link->prop_id,
+                'pov_latitude'    => $result['streetview']['pov_latitude'],
+                'pov_longitude'   => $result['streetview']['pov_longitude'],
+                'pov_pitch'       => $result['streetview']['pov_pitch'],
+                'pov_heading'     => $result['streetview']['pov_heading'],
+                'pov_zoom'        => $result['streetview']['pov_zoom']
+            ]);
+
+            foreach ($result['files']['file'] as $file) {
+                PropertyFiles::create([
+                    'prop_id'       => $link->prop_id,
+                    'name'         => $file['name'],
+                    'url'          => $file['url'],
+                    'updated'      => $file['updated'],
+                ]);
+            }
         }
         return $properties;
+    }
+
+    public function sanitizeArray($payload)
+    {
+        return empty($payload) ? '' : json_encode($payload);
     }
 
     public function updateProperties()

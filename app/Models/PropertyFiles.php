@@ -8,4 +8,11 @@ use Illuminate\Database\Eloquent\Model;
 class PropertyFiles extends Model
 {
     use HasFactory;
+    protected $fillable = [
+'prop_id',
+'file',
+'name',
+'url',
+'updated',
+    ];
 }

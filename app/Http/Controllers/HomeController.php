@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\PropertyFiles;
+use Illuminate\Support\Facades\DB;
 
 class HomeController extends Controller
 {
@@ -32,9 +34,17 @@ class HomeController extends Controller
     {
         return view('contact');
     }
-    public function recent()
+    public function new_developments()
     {
-        return view('recent-developments');
+        $properties = DB::table('properties')
+        ->join('property_details', 'properties.prop_id', '=', 'property_details.prop_id')
+        ->join('property_addresses', 'properties.prop_id', '=', 'property_addresses.pro_id')
+        ->get();
+        foreach ($properties as $property ) {
+            $file = PropertyFiles::where('prop_id','=',$property->prop_id)->first();
+            $property->file = $file;
+        }
+        return view('recent-developments',['properties' => $properties]);
     }
 
     public function all_sites()
