@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<properties xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://webservices.vebra.com/export/xsd/v11/exportapi.xsd">
+    <property>
+        <prop_id>31488859</prop_id>
+        <lastchanged>2022-05-20T16:08:34.257</lastchanged>
+        <url>https://webservices.vebra.com/export/360propertyapi/v11/branch/40419/property/31488859</url>
+    </property>
+    <property>
+        <prop_id>31486244</prop_id>
+        <lastchanged>2022-05-20T15:16:03.25</lastchanged>
+        <url>https://webservices.vebra.com/export/360propertyapi/v11/branch/40419/property/31486244</url>
+    </property>
+    <property>
+        <prop_id>31488971</prop_id>
+        <lastchanged>2022-05-18T09:59:20.433</lastchanged>
+        <url>https://webservices.vebra.com/export/360propertyapi/v11/branch/40419/property/31488971</url>
+    </property>
+    <property>
+        <prop_id>31488929</prop_id>
+        <lastchanged>2022-05-18T10:00:25.097</lastchanged>
+        <url>https://webservices.vebra.com/export/360propertyapi/v11/branch/40419/property/31488929</url>
+    </property>
+    <property>
+        <prop_id>31528097</prop_id>
+        <lastchanged>2022-05-27T15:48:58.16</lastchanged>
+        <url>https://webservices.vebra.com/export/360propertyapi/v11/branch/40419/property/31528097</url>
+    </property>
+    <property>
+        <prop_id>31528134</prop_id>
+        <lastchanged>2022-05-27T15:55:39.82</lastchanged>
+        <url>https://webservices.vebra.com/export/360propertyapi/v11/branch/40419/property/31528134</url>
+    </property>
+    <property>
+        <prop_id>31519354</prop_id>
+        <lastchanged>2022-05-24T19:08:16.94</lastchanged>
+        <url>https://webservices.vebra.com/export/360propertyapi/v11/branch/40419/property/31519354</url>
+    </property>
+    <property>
+        <prop_id>31519353</prop_id>
+        <lastchanged>2022-05-24T19:09:51.213</lastchanged>
+        <url>https://webservices.vebra.com/export/360propertyapi/v11/branch/40419/property/31519353</url>
+    </property>
+</properties>
