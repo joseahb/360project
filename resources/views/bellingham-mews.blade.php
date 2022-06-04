@@ -386,28 +386,42 @@
                         <li>
                             <div class="ms-auto"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-chevron-right">
                                     <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+<<<<<<< HEAD
                                 </svg><a href="https://www.facebook.com/Three-Sixty-Property-100116886065770"><img class="me-2" src="assets/img/facebook.png"></a><a href="https://www.instagram.com/threesixtynewbuild/"><img class="me-2" src="assets/img/instagram.png"></a><a href="https://www.linkedin.com/company/three-sixty-property"><img src="assets/img/linkedin.png"></a></div>
+=======
+                                </svg><img class="me-2" src="assets/img/facebook.png"><img class="me-2" src="assets/img/instagram.png"><img src="assets/img/linkedin.png"></div>
+>>>>>>> 19918f3c616affde75b89066d891caa4abb0aed2
                         </li>
                     </ul>
                 </div>
             </div>
+<<<<<<< HEAD
             <hr class="footer_hr">
             <div class="d-flex d-xl-none align-items-center"><a class="footer_span" href="privacy-policy.html"><strong>PRIVACY POLICY</strong><br></a><span class="footer_span">/</span><a class="footer_span" href="#"><strong>DISCLAIMER</strong><br></a><span class="footer_span">/</span><a class="footer_span" href="#"><strong>TERMS AND CONDITIONS&nbsp;</strong><br></a></div>
             <div class="d-grid d-xl-none mt-2"><a class="footer_span_sm text-decoration-none text-start" href="mailto:info@threesixty.co.uk"><strong>INFO@THREESIXTY.CO.UK</strong><br></a><span class="footer_span_sm mt-2 text-start"><strong>+44 7770 070 070</strong><br></span></div>
             <div class="mt-3 d-flex d-xl-none align-items-center justify-content-center"><span class="footer_span_sm"><strong>COPYRIGHT 2022 THREE SIXTY PROPERTY</strong><br></span></div>
+=======
+>>>>>>> 19918f3c616affde75b89066d891caa4abb0aed2
         </div>
         <div><div class="alert alert-dismissible text-center cookiealert" role="alert">
     <div><h1 class="cookie_main_heading">Cookie Settings</h1></div>
   <div class="cookiealert-container">We use cookies, some of them are essential, others are optional.<a href="http://cookiesandyou.com/" target="_blank">Learn more</a>
 
-      
+
   </div>
     <hr>
     <div>
+<<<<<<< HEAD
         <button type="button" class="btn btn-sm submit_btn acceptcookies py-auto py-lg-2" aria-label="Close" onclick="acceptCookieConsent()">
           Accept
       </button>
         <button type="button" class="btn btn-sm submit_btn pref_btn acceptcookies mt-2 mt-md-0 py-auto py-lg-2" aria-label="Close" data-toggle="modal" data-target="#prefrencesModal">
+=======
+        <button type="button" class="btn btn-sm submit_btn acceptcookies py-auto py-lg-2" aria-label="Close">
+          Accept
+      </button>
+        <button type="button" class="btn btn-sm submit_btn acceptcookies mt-2 mt-md-0 py-auto py-lg-2" aria-label="Close">
+>>>>>>> 19918f3c616affde75b89066d891caa4abb0aed2
           Preferences
       </button>
     </div>
@@ -418,6 +432,7 @@
             <h1 class="register_div_heading"><strong>Register your&nbsp;</strong><br><strong>interest</strong><br></h1><a class="btn register_div_btn" role="button" href="register.html">Register<br></a>
         </div>
     </div>
+<<<<<<< HEAD
     <div class="modal fade" role="dialog" tabindex="-1" id="prefrencesModal" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -449,6 +464,8 @@
             </div>
         </div>
     </div>
+=======
+>>>>>>> 19918f3c616affde75b89066d891caa4abb0aed2
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
