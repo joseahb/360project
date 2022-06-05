@@ -52,15 +52,35 @@ class HomeController extends Controller
         ->join('property_details', 'properties.prop_id', '=', 'property_details.prop_id')
         ->join('property_addresses', 'properties.prop_id', '=', 'property_addresses.pro_id')
         ->get();
-        foreach ($properties as $property ) {
-            $file = PropertyFiles::where('prop_id','=',$property->prop_id)->first();
+        foreach ($properties as $property) {
+            $file = PropertyFiles::where('prop_id', '=', $property->prop_id)->first();
             $property->file = $file;
         }
-        return view('recent-developments',['properties' => $properties]);
+        return view('recent-developments', ['properties' => $properties]);
     }
 
-    public function all_sites()
+    public function previous_projects()
     {
-        return view('all-sites');
+        $properties = DB::table('properties')
+        ->join('property_details', 'properties.prop_id', '=', 'property_details.prop_id')
+        ->join('property_addresses', 'properties.prop_id', '=', 'property_addresses.pro_id')
+        ->get();
+        foreach ($properties as $property) {
+            $file = PropertyFiles::where('prop_id', '=', $property->prop_id)->first();
+            $property->file = $file;
+        }
+        return view('previous-sales', ['properties' => $properties]);
+    }
+
+    public function property($id)
+    {
+        $property = DB::table('properties')
+        ->join('property_details', 'properties.prop_id', '=', 'property_details.prop_id')
+        ->join('property_addresses', 'properties.prop_id', '=', 'property_addresses.pro_id')
+        ->whereRaw('properties.id = '.$id)
+        ->first();
+        $files = PropertyFiles::where('prop_id', '=', $property->prop_id)->get();
+        $property->files = $files;
+        return view('property-single', ['property' => $property]);
     }
 }

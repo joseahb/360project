@@ -24,20 +24,12 @@
                     </form>
                 </div>
                 <div class="col col-12 col-lg-6 px-0 d-none d-lg-flex align-items-center justify-content-center">
-<<<<<<< HEAD
                     <div><img class="w-100" src="assets/img/contact_img.jpg"></div>
-=======
-                    <div><img class="w-100" src="{{asset('assets/img/contact_img.jpg')}}"></div>
->>>>>>> 19918f3c616affde75b89066d891caa4abb0aed2
                 </div>
             </div>
         </div>
     </section>
     <section class="my-5">
-<<<<<<< HEAD
         <div class="container-fluid p-0"><img class="w-100" src="assets/img/Vector.png"></div>
-=======
-        <div class="container-fluid p-0"><img class="w-100" src="{{asset('assets/img/Vector.png')}}"></div>
->>>>>>> 19918f3c616affde75b89066d891caa4abb0aed2
     </section>
     @endsection
