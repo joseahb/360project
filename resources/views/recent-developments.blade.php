@@ -30,7 +30,7 @@
        <div class="container-fluid px-0">
             @foreach ($properties as $key => $property)
                 @if ($key % 2 == 0)
-                    <a href="#" style="text-decoration:none">
+                    <a href="{{ url('property/'.$property->id)}}" style="text-decoration:none">
                         <div class="row mx-0 " style="background: url({{ $property->file->url }}) 0 0 repeat"
                             id="property">
                             <div class="col col-12 col-lg-8 px-0">
@@ -61,7 +61,7 @@
                         </div>
                     </a>
                 @else
-                    <a href="#" style="text-decoration:none">
+                    <a href="{{ url('property/'.$property->id)}}" style="text-decoration:none">
                         <div class="row mx-0 " style="background: url({{ $property->file->url }}) 0 0 repeat" id="property">
                             <div class="col px-0 d-none d-lg-block col-12 col-lg-4">
                                 <div class="development_location_div d-flex h-100">

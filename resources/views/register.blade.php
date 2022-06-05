@@ -8,7 +8,7 @@
     <section>
         <div class="container-fluid px-0">
             <div class="mt-0 mt-lg-0">
-                <div class="mt-0 mt-lg-4"><img class="w-100" src="{{asset('assets/img/register_img.jpg')}}"></div>
+                <div class="mt-0 mt-lg-4"><img class="w-100" src="assets/img/register_img.jpg"></div>
             </div>
         </div>
     </section>
@@ -22,25 +22,46 @@
                     </div>
                 </div>
                 <div class="col col-12 col-lg-6 px-0 mt-4 mt-lg-0">
-                    <form class="register_form">
+                    @if(Session::has('message'))
+                        <div class="text-center mb-5"><h5>Your request has been submitted successfully</h5></div>
+                    @endif
+                    <form class="register_form" method="POST" action="{{ url('register') }}">
+                        @csrf
                         <div class="row mx-0">
                             <div class="col col-12 col-md-6 ps-0 pe-0 pe-md-2">
-                                <div><label class="form-label form_label">WHO ARE YOU ?</label><select class="form-select select_input register_role">
-                                        <option value="14">BUYER</option>
-                                        <option value="15">DEVELOPER</option>
-                                    </select></div>
+                                <div><label class="form-label form_label">WHO ARE YOU ?</label>
+                                    <select name="type" class="form-select select_input register_role">
+                                        <option value="buyer">BUYER</option>
+                                        <option value="developer">DEVELOPER</option>
+                                    </select>
+                                </div>
                             </div>
                             <div class="col col-12 col-md-6 pe-0 ps-0 ps-md-2 mt-4 mt-md-0">
-                                <div class="date_input ms-auto"><label class="form-label form_label"><strong>DATE</strong></label><input class="form-control ms-auto w-100" type="date"></div>
+                                <div class="date_input ms-auto"><label
+                                        class="form-label form_label"><strong>DATE</strong></label><input
+                                        class="form-control ms-auto w-100" type="date" name="date"></div>
                             </div>
                         </div>
                         <div class="mt-4">
-                            <div><label class="form-label form_label"><strong>FULL NAME&nbsp; *&nbsp;</strong></label><input class="form-control" type="text"></div>
-                            <div class="company_input_div d-none mt-2"><label class="form-label form_label"><strong>Company&nbsp; *</strong><br></label><input class="form-control" type="text"></div>
-                            <div class="mt-2"><label class="form-label form_label"><strong>E-MAIL ADDRESS&nbsp;*</strong><br></label><input class="form-control" type="email"></div>
-                            <div class="mt-2"><label class="form-label form_label"><strong>PHONE NUMBER&nbsp;</strong><br></label><input class="form-control" type="number"></div>
-                            <div class="mt-2"><label class="form-label form_label"><strong>AREA *&nbsp;</strong><br></label><select class="form-select"></select></div>
-                            <div class="mt-3"><button class="btn submit_btn" type="submit">Submit</button></div>
+                            <div><label class="form-label form_label"><strong>FULL NAME&nbsp;
+                                        *&nbsp;</strong></label><input class="form-control" type="text" name="full_name"
+                                    required></div>
+                            <div class="company_input_div d-none mt-2"><label
+                                    class="form-label form_label"><strong>Company&nbsp; *</strong><br></label><input
+                                    class="form-control" type="text" name="company"></div>
+                            <div class="mt-2"><label class="form-label form_label"><strong>E-MAIL
+                                        ADDRESS&nbsp;*</strong><br></label><input name="email" class="form-control"
+                                    type="email" required>
+                            </div>
+                            <div class="mt-2"><label class="form-label form_label"><strong>PHONE
+                                        NUMBER&nbsp;</strong><br></label><input name="phone" class="form-control"
+                                    type="number">
+                            </div>
+                            <div class="mt-2"><label class="form-label form_label"><strong>AREA
+                                        *&nbsp;</strong><br></label><input class="form-control" name="area" required>
+                            </div>
+                            <div class="mt-3"><button class="btn submit_btn" type="submit">Submit</button>
+                            </div>
                         </div>
                     </form>
                 </div>
@@ -54,6 +75,6 @@
         </div>
     </section>
     <section class="my-5">
-        <div class="container-fluid p-0"><img class="w-100" src="{{asset('assets/img/Vector.png')}}"></div>
+        <div class="container-fluid p-0"><img class="w-100" src="assets/img/Vector.png"></div>
     </section>
 @endsection

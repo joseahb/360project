@@ -46,6 +46,10 @@ class HomeController extends Controller
     {
         return view('ebooks');
     }
+    public function all_sites()
+    {
+        return view('all-sites');
+    }
     public function new_developments()
     {
         $properties = DB::table('properties')
